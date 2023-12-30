@@ -8,6 +8,7 @@ public class Slytherin extends Student {
     public Slytherin() {
 
     }
+
     public Slytherin(String faculty, String fullName, int magicPower, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.cunning = cunning;
@@ -50,7 +51,7 @@ public class Slytherin extends Student {
             return student2.getFullName() + ",  total power - " + student2.calculateTotalPowerSpecialSlytherin() +
                     ", Stronger then a student, " +
                     student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin();
-        }else {
+        } else {
             return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
                     ", and, " +
                     student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialSlytherin() +

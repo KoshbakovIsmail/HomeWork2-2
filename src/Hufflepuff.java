@@ -26,7 +26,6 @@ public class Hufflepuff extends Student {
         return honest;
     }
 
-    //Special
     public int calculateTotalPowerSpecialHufflepuff() {
         return hardworking + loyal + honest;
     }

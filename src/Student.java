@@ -1,6 +1,5 @@
 
-
-public class Student {
+public  class Student {
     private String faculty;
     private String fullName;
     private int magicPower;
@@ -33,33 +32,51 @@ public class Student {
         return transgressionDistance;
     }
 
-    public void calculateStudentPower(Student[] student) {
-        int totalPower = 0;
-        String faculty = "";
-        String fullName = "";
-        for (int i = 0; i < student.length; i++) {
-            Student students = student[i];
-            faculty = students.faculty;
-            fullName = students.fullName;
-            totalPower = students.getMagicPower() +
-                    students.getTransgressionDistance();
-            System.out.println(faculty + " " + fullName + " " + totalPower);
+    public int calculateTotalMagicPower() {
+        return magicPower + transgressionDistance;
+    }
+
+    public int calculateTotalPowerSpecialGryffindor() {
+        return calculateTotalPowerSpecialGryffindor();
+    }
+    public int calculateTotalPowerSpecialSlytherin() {
+        return calculateTotalPowerSpecialSlytherin();
+    }
+
+    public int calculateTotalPowerSpecialHufflepuff() {
+        return calculateTotalPowerSpecialHufflepuff();
+    }
+
+    public int calculateTotalPowerSpecialRavenclaw() {
+        return calculateTotalPowerSpecialRavenclaw();
+    }
+    public  String comparisonStudentsShcoolHogwart(Student student1, Student student2) {
+        if (student1.calculateTotalMagicPower() > student2.calculateTotalMagicPower()) {
+            return  student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower() +
+                    ", Stronger than a student, " +
+                    student2.getFullName() + ", total power - " + student2.calculateTotalMagicPower();
+        } else if (student1.calculateTotalMagicPower() < student2.calculateTotalMagicPower()) {
+            return student2.getFullName() + ", total power - " + student2.calculateTotalMagicPower() +
+                    ", Stronger than a student, " +
+                    student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower();
+        } else {
+            return student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower() +
+                    ", and, " +
+                    student2.getFullName() + ", total power - " + student2.calculateTotalMagicPower() +
+                    " have equal power";
         }
     }
 
-    public void comparisonPowerStudent() {
-
+public void printListHogwartsStrudent(Student[] student) {
+    for (int i = 0; i < student.length; i++) {
+        Student students = student[i];
+        System.out.println(students.toString());
     }
 
-    public void printListHogwartsStudent(Student[] students) {
-        for (int i = 0; i < students.length; i++) {
-            Student student = students[i];
-            System.out.println(student.toString());
-        }
-
+}
+    public void printStars() {
+        System.out.println("*".repeat(140));
     }
-
-
     public String toString() {
         return "Faculty: " + getFaculty() +
                 ", Full Name: " + getFullName() +

@@ -37,6 +37,26 @@ public class Slytherin extends Student {
         return thirstForPower;
     }
 
+    public int calculateTotalPowerSpecialSlytherin() {
+        return cunning + determination + ambition + resourcefulness + thirstForPower;
+    }
+
+    public String comparisonStudentsFacultySlytherin(Student student1, Student student2) {
+        if (student1.calculateTotalPowerSpecialSlytherin() > student2.calculateTotalPowerSpecialSlytherin()) {
+            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
+                    ", Stronger then a student, " +
+                    student2.getFullName() + ", total power -  " + student2.calculateTotalPowerSpecialSlytherin();
+        } else if (student1.calculateTotalPowerSpecialSlytherin() < student2.calculateTotalPowerSpecialGryffindor()) {
+            return student2.getFullName() + ",  total power - " + student2.calculateTotalPowerSpecialSlytherin() +
+                    ", Stronger then a student, " +
+                    student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin();
+        }else {
+            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
+                    ", and, " +
+                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialSlytherin() +
+                    " have egual power ";
+        }
+    }
 
     public String toString() {
         return super.toString() +

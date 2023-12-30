@@ -6,6 +6,7 @@ public class Hufflepuff extends Student {
     public Hufflepuff() {
 
     }
+
     public Hufflepuff(String faculty, String fullName, int magicPower, int transgressionDistance, int hardworking, int loyal, int honest) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.hardworking = hardworking;
@@ -23,6 +24,28 @@ public class Hufflepuff extends Student {
 
     public int getHonest() {
         return honest;
+    }
+
+    //Special
+    public int calculateTotalPowerSpecialHufflepuff() {
+        return hardworking + loyal + honest;
+    }
+
+    public String comparsionStudentsFacultyHuffepuff(Student student1, Student student2) {
+        if (student1.calculateTotalPowerSpecialHufflepuff() > student2.calculateTotalPowerSpecialHufflepuff()) {
+            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialHufflepuff() +
+                    ", Stronger then a student, " +
+                    student2.getFullName() + ", total power -  " + student2.calculateTotalPowerSpecialHufflepuff();
+        } else if (student1.calculateTotalPowerSpecialHufflepuff() < student2.calculateTotalPowerSpecialHufflepuff()) {
+            return student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialHufflepuff() +
+                    ", Stronger then a student, " +
+                    student1.getFullName() + ", total power -  " + student1.calculateTotalPowerSpecialHufflepuff();
+        } else {
+            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialHufflepuff() +
+                    ", and, " +
+                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialHufflepuff() +
+                    " have egual power";
+        }
     }
 
     public String toString() {

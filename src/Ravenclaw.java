@@ -4,10 +4,6 @@ public class Ravenclaw extends Student {
     private int witty;
     private int creativity;
 
-    public Ravenclaw() {
-
-    }
-
     public Ravenclaw(String faculty, String fullName, int magicPower, int transgressionDistance, int smart, int mudras, int witty, int creativity) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.smart = smart;
@@ -36,7 +32,7 @@ public class Ravenclaw extends Student {
         return smart + mudras + witty + creativity;
     }
 
-    public String comparisonStudentsFacultyRavenclaw(Student student1, Student student2) {
+    public static String comparisonStudentsFacultyRavenclaw(Student student1, Student student2) {
         if (student1.calculateTotalPowerSpecialRavenclaw() > student2.calculateTotalPowerSpecialRavenclaw()) {
             return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialRavenclaw() +
                     ", Stronger then a student, " +
@@ -59,5 +55,6 @@ public class Ravenclaw extends Student {
                 ", Mudras: " + getMudras() +
                 ", Witty: " + getWitty() +
                 ", Creativity : " + getCreativity();
+
     }
 }

@@ -1,13 +1,6 @@
 
-
 public class Hogwarts {
     public static void main(String[] args) {
-        Student students = new Student();
-        Gryffindor gryffindor = new Gryffindor();
-        Slytherin slytherin = new Slytherin();
-        Hufflepuff hufflepuff = new Hufflepuff();
-        Ravenclaw ravenclaw = new Ravenclaw();
-
         Student[] student = new Student[12];
         student[0] = new Gryffindor("Gryffindor", "Harry Potter", 100, 95, 98, 99, 100);
         student[1] = new Gryffindor("Gryffindor", "Hermione Granger", 98, 94, 90, 95, 95);
@@ -21,18 +14,19 @@ public class Hogwarts {
         student[9] = new Ravenclaw("Ravenclaw", "Zhou Chang", 60, 65, 55, 50, 85, 60);
         student[10] = new Ravenclaw("Ravenclaw", "Padma Patil", 65, 65, 70, 75, 60, 65);
         student[11] = new Ravenclaw("Ravenclaw", "Marcus Belby", 60, 65, 55, 50, 85, 60);
-        students.printStars();
-        students.printListHogwartsStrudent(student);
-        students.printStars();
-        System.out.println(students.comparisonStudentsShcoolHogwart(student[0], student[4]));
-        students.printStars();
-        System.out.println(gryffindor.comparisonStudentsFacultyGryffindor(student[1], student[2]));
-        students.printStars();
-        System.out.println(slytherin.comparisonStudentsFacultySlytherin(student[3], student[5]));
-        students.printStars();
-        System.out.println(hufflepuff.comparsionStudentsFacultyHuffepuff(student[6], student[8]));
-        students.printStars();
-        System.out.println(ravenclaw.comparisonStudentsFacultyRavenclaw(student[9], student[11]));
+        Student.printStars();
+        Student.printListHogwartsStrudent(student);
+        Student.printStars();
+        System.out.println(Student.comparisonStudentsShcoolHogwart(student[0], student[4]));
+        Student.printStars();
+        System.out.println(Gryffindor.comparisonStudentsFacultyGryffindor(student[1], student[2]));
+        Student.printStars();
+        System.out.println(Slytherin.comparisonStudentsFacultySlytherin(student[3], student[5]));
+        Student.printStars();
+        System.out.println(Hufflepuff.comparsionStudentsFacultyHuffepuff(student[6], student[8]));
+        Student.printStars();
+        System.out.println(Ravenclaw.comparisonStudentsFacultyRavenclaw(student[9], student[11]));
+
     }
 }
 

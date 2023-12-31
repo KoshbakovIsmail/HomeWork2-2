@@ -3,10 +3,6 @@ public class Gryffindor extends Student {
     private int honor;
     private int bravery;
 
-    public Gryffindor() {
-
-    }
-
     public Gryffindor(String faculty, String fullName, int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.nobility = nobility;
@@ -30,7 +26,7 @@ public class Gryffindor extends Student {
         return nobility + honor + bravery;
     }
 
-    public String comparisonStudentsFacultyGryffindor(Student student1, Student student2) {
+    public static String comparisonStudentsFacultyGryffindor(Student student1, Student student2) {
         if (student1.calculateTotalPowerSpecialGryffindor() > student2.calculateTotalPowerSpecialGryffindor()) {
             return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialGryffindor() +
                     ", Stronger than a student, " +
@@ -52,6 +48,7 @@ public class Gryffindor extends Student {
                 ", Nobility: " + getNobility() +
                 ", Honor: " + getBravery() +
                 ", Bravery: " + getBravery();
+
     }
 
 }

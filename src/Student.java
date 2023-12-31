@@ -1,13 +1,9 @@
 
-public  class Student {
+public class Student {
     private String faculty;
     private String fullName;
     private int magicPower;
     private int transgressionDistance;
-
-    public Student() {
-
-    }
 
     public Student(String faculty, String fullName, int magicPower, int transgressionDistance) {
         this.faculty = faculty;
@@ -39,6 +35,7 @@ public  class Student {
     public int calculateTotalPowerSpecialGryffindor() {
         return calculateTotalPowerSpecialGryffindor();
     }
+
     public int calculateTotalPowerSpecialSlytherin() {
         return calculateTotalPowerSpecialSlytherin();
     }
@@ -50,9 +47,10 @@ public  class Student {
     public int calculateTotalPowerSpecialRavenclaw() {
         return calculateTotalPowerSpecialRavenclaw();
     }
-    public  String comparisonStudentsShcoolHogwart(Student student1, Student student2) {
+
+    public static String comparisonStudentsShcoolHogwart(Student student1, Student student2) {
         if (student1.calculateTotalMagicPower() > student2.calculateTotalMagicPower()) {
-            return  student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower() +
+            return student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower() +
                     ", Stronger than a student, " +
                     student2.getFullName() + ", total power - " + student2.calculateTotalMagicPower();
         } else if (student1.calculateTotalMagicPower() < student2.calculateTotalMagicPower()) {
@@ -67,16 +65,18 @@ public  class Student {
         }
     }
 
-public void printListHogwartsStrudent(Student[] student) {
-    for (int i = 0; i < student.length; i++) {
-        Student students = student[i];
-        System.out.println(students.toString());
+    public static void printListHogwartsStrudent(Student[] student) {
+        for (int i = 0; i < student.length; i++) {
+            Student students = student[i];
+            System.out.println(students.toString());
+        }
+
     }
 
-}
-    public void printStars() {
+    public static void printStars() {
         System.out.println("*".repeat(140));
     }
+
     public String toString() {
         return "Faculty: " + getFaculty() +
                 ", Full Name: " + getFullName() +

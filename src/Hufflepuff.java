@@ -3,10 +3,6 @@ public class Hufflepuff extends Student {
     private int loyal;
     private int honest;
 
-    public Hufflepuff() {
-
-    }
-
     public Hufflepuff(String faculty, String fullName, int magicPower, int transgressionDistance, int hardworking, int loyal, int honest) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.hardworking = hardworking;
@@ -30,7 +26,7 @@ public class Hufflepuff extends Student {
         return hardworking + loyal + honest;
     }
 
-    public String comparsionStudentsFacultyHuffepuff(Student student1, Student student2) {
+    public static String comparsionStudentsFacultyHuffepuff(Student student1, Student student2) {
         if (student1.calculateTotalPowerSpecialHufflepuff() > student2.calculateTotalPowerSpecialHufflepuff()) {
             return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialHufflepuff() +
                     ", Stronger then a student, " +

@@ -5,10 +5,6 @@ public class Slytherin extends Student {
     private int resourcefulness;
     private int thirstForPower;
 
-    public Slytherin() {
-
-    }
-
     public Slytherin(String faculty, String fullName, int magicPower, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
         super(faculty, fullName, magicPower, transgressionDistance);
         this.cunning = cunning;
@@ -42,7 +38,7 @@ public class Slytherin extends Student {
         return cunning + determination + ambition + resourcefulness + thirstForPower;
     }
 
-    public String comparisonStudentsFacultySlytherin(Student student1, Student student2) {
+    public static String comparisonStudentsFacultySlytherin(Student student1, Student student2) {
         if (student1.calculateTotalPowerSpecialSlytherin() > student2.calculateTotalPowerSpecialSlytherin()) {
             return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
                     ", Stronger then a student, " +
@@ -66,5 +62,6 @@ public class Slytherin extends Student {
                 ", Ambition: " + getAmbition() +
                 ", Resourcefulness: " + getResourcefulness() +
                 ", Thirst For Power: " + getThirstForPower();
+
     }
 }

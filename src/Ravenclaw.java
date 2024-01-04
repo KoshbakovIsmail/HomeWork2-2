@@ -32,19 +32,19 @@ public class Ravenclaw extends Student {
         return smart + mudras + witty + creativity;
     }
 
-    public static String comparisonStudentsFacultyRavenclaw(Student student1, Student student2) {
-        if (student1.calculateTotalPowerSpecialRavenclaw() > student2.calculateTotalPowerSpecialRavenclaw()) {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialRavenclaw() +
+    public static String comparisonStudentsFacultyRavenclaw(Ravenclaw ravenclaw1, Ravenclaw ravenclaw2) {
+        if (ravenclaw1.calculateTotalPowerSpecialRavenclaw() > ravenclaw2.calculateTotalPowerSpecialRavenclaw()) {
+            return ravenclaw1.getFullName() + ", total power - " + ravenclaw1.calculateTotalPowerSpecialRavenclaw() +
                     ", Stronger then a student, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialRavenclaw();
-        } else if (student1.calculateTotalPowerSpecialRavenclaw() < student2.calculateTotalPowerSpecialRavenclaw()) {
-            return student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialRavenclaw() +
+                    ravenclaw2.getFullName() + ", total power - " + ravenclaw2.calculateTotalPowerSpecialRavenclaw();
+        } else if (ravenclaw1.calculateTotalPowerSpecialRavenclaw() < ravenclaw2.calculateTotalPowerSpecialRavenclaw()) {
+            return ravenclaw2.getFullName() + ", total power - " + ravenclaw2.calculateTotalPowerSpecialRavenclaw() +
                     ", Stronger then a student, " +
-                    student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialRavenclaw();
+                    ravenclaw1.getFullName() + ", total power - " + ravenclaw1.calculateTotalPowerSpecialRavenclaw();
         } else {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialRavenclaw() +
+            return  ravenclaw1.getFullName() + ", total power - " + ravenclaw1.calculateTotalPowerSpecialRavenclaw() +
                     ", and, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialRavenclaw() +
+                    ravenclaw2.getFullName() + ", total power - " + ravenclaw2.calculateTotalPowerSpecialRavenclaw() +
                     " have egual power";
         }
     }

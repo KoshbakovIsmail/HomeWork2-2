@@ -26,19 +26,19 @@ public class Gryffindor extends Student {
         return nobility + honor + bravery;
     }
 
-    public static String comparisonStudentsFacultyGryffindor(Student student1, Student student2) {
-        if (student1.calculateTotalPowerSpecialGryffindor() > student2.calculateTotalPowerSpecialGryffindor()) {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialGryffindor() +
+    public static String comparisonStudentsFacultyGryffindor(Gryffindor gryffindor1, Gryffindor gryffindor2) {
+        if (gryffindor1.calculateTotalPowerSpecialGryffindor() > gryffindor2.calculateTotalPowerSpecialGryffindor()) {
+            return gryffindor1.getFullName() + ", total power - " + gryffindor1.calculateTotalPowerSpecialGryffindor() +
                     ", Stronger than a student, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialGryffindor();
-        } else if (student1.calculateTotalPowerSpecialGryffindor() < student2.calculateTotalPowerSpecialGryffindor()) {
-            return student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialGryffindor() +
+                    gryffindor2.getFullName() + ", total power - " + gryffindor2.calculateTotalPowerSpecialGryffindor();
+        } else if (gryffindor1.calculateTotalPowerSpecialGryffindor() < gryffindor2.calculateTotalPowerSpecialGryffindor()) {
+            return gryffindor2.getFullName() + ", total power - " + gryffindor2.calculateTotalPowerSpecialGryffindor() +
                     ", Stronger than a student, " +
-                    student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialGryffindor();
+                    gryffindor1.getFullName() + ", total power - " + gryffindor1.calculateTotalPowerSpecialGryffindor();
         } else {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialGryffindor() +
+            return gryffindor1.getFullName() + ", total power - " + gryffindor1.calculateTotalPowerSpecialGryffindor() +
                     ", and, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialGryffindor() +
+                    gryffindor2.getFullName() + ", total power - " + gryffindor2.calculateTotalPowerSpecialGryffindor() +
                     " have equal power";
         }
     }

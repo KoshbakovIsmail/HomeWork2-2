@@ -32,22 +32,6 @@ public class Student {
         return magicPower + transgressionDistance;
     }
 
-    public int calculateTotalPowerSpecialGryffindor() {
-        return calculateTotalPowerSpecialGryffindor();
-    }
-
-    public int calculateTotalPowerSpecialSlytherin() {
-        return calculateTotalPowerSpecialSlytherin();
-    }
-
-    public int calculateTotalPowerSpecialHufflepuff() {
-        return calculateTotalPowerSpecialHufflepuff();
-    }
-
-    public int calculateTotalPowerSpecialRavenclaw() {
-        return calculateTotalPowerSpecialRavenclaw();
-    }
-
     public static String comparisonStudentsShcoolHogwart(Student student1, Student student2) {
         if (student1.calculateTotalMagicPower() > student2.calculateTotalMagicPower()) {
             return student1.getFullName() + ", total power - " + student1.calculateTotalMagicPower() +
@@ -65,19 +49,31 @@ public class Student {
         }
     }
 
-    public static void printListHogwartsStrudent(Student[] student) {
-        for (int i = 0; i < student.length; i++) {
-            Student students = student[i];
-            System.out.println(students.toString());
-        }
-
+    public static void printListStudentHogwarts(Student student1, Student student2, Student student3,
+                                                Student student4, Student student5, Student student6,
+                                                Student student7, Student student8, Student student9,
+                                                Student student10, Student student11, Student student12
+                                                ) {
+        System.out.println(" ".repeat(28) + "**********" + " ".repeat(10) + "List of Hogwarts School students" + " ".repeat(10) + "**********");
+        System.out.println(student1.toString());
+        System.out.println(student2.toString());
+        System.out.println(student3.toString());
+        System.out.println(student4.toString());
+        System.out.println(student5.toString());
+        System.out.println(student6.toString());
+        System.out.println(student7.toString());
+        System.out.println(student8.toString());
+        System.out.println(student9.toString());
+        System.out.println(student10.toString());
+        System.out.println(student11.toString());
+        System.out.println(student12.toString());
     }
 
     public static void printStars() {
         System.out.println("*".repeat(140));
     }
 
-    public String toString() {
+    public  String toString() {
         return "Faculty: " + getFaculty() +
                 ", Full Name: " + getFullName() +
                 ", Magic Power: " + getMagicPower() +

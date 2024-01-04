@@ -26,19 +26,19 @@ public class Hufflepuff extends Student {
         return hardworking + loyal + honest;
     }
 
-    public static String comparsionStudentsFacultyHuffepuff(Student student1, Student student2) {
-        if (student1.calculateTotalPowerSpecialHufflepuff() > student2.calculateTotalPowerSpecialHufflepuff()) {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialHufflepuff() +
+    public static String comparsionStudentsFacultyHuffepuff(Hufflepuff hufflepuff1, Hufflepuff hufflepuff2) {
+        if (hufflepuff1.calculateTotalPowerSpecialHufflepuff() > hufflepuff2.calculateTotalPowerSpecialHufflepuff()) {
+            return hufflepuff1.getFullName() + ", total power - " + hufflepuff1.calculateTotalPowerSpecialHufflepuff() +
                     ", Stronger then a student, " +
-                    student2.getFullName() + ", total power -  " + student2.calculateTotalPowerSpecialHufflepuff();
-        } else if (student1.calculateTotalPowerSpecialHufflepuff() < student2.calculateTotalPowerSpecialHufflepuff()) {
-            return student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialHufflepuff() +
+                    hufflepuff2.getFullName() + ", total power -  " + hufflepuff2.calculateTotalPowerSpecialHufflepuff();
+        } else if (hufflepuff1.calculateTotalPowerSpecialHufflepuff() < hufflepuff2.calculateTotalPowerSpecialHufflepuff()) {
+            return hufflepuff2.getFullName() + ", total power - " + hufflepuff2.calculateTotalPowerSpecialHufflepuff() +
                     ", Stronger then a student, " +
-                    student1.getFullName() + ", total power -  " + student1.calculateTotalPowerSpecialHufflepuff();
+                    hufflepuff1.getFullName() + ", total power -  " + hufflepuff1.calculateTotalPowerSpecialHufflepuff();
         } else {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialHufflepuff() +
+            return hufflepuff1.getFullName() + ", total power - " + hufflepuff1.calculateTotalPowerSpecialHufflepuff() +
                     ", and, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialHufflepuff() +
+                    hufflepuff2.getFullName() + ", total power - " + hufflepuff2.calculateTotalPowerSpecialHufflepuff() +
                     " have egual power";
         }
     }

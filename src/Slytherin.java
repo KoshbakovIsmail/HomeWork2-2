@@ -38,19 +38,19 @@ public class Slytherin extends Student {
         return cunning + determination + ambition + resourcefulness + thirstForPower;
     }
 
-    public static String comparisonStudentsFacultySlytherin(Student student1, Student student2) {
-        if (student1.calculateTotalPowerSpecialSlytherin() > student2.calculateTotalPowerSpecialSlytherin()) {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
+    public static String comparisonStudentsFacultySlytherin(Slytherin slytherin1, Slytherin slytherin2) {
+        if (slytherin1.calculateTotalPowerSpecialSlytherin() > slytherin2.calculateTotalPowerSpecialSlytherin()) {
+            return slytherin1.getFullName() + ", total power - " + slytherin1.calculateTotalPowerSpecialSlytherin() +
                     ", Stronger then a student, " +
-                    student2.getFullName() + ", total power -  " + student2.calculateTotalPowerSpecialSlytherin();
-        } else if (student1.calculateTotalPowerSpecialSlytherin() < student2.calculateTotalPowerSpecialGryffindor()) {
-            return student2.getFullName() + ",  total power - " + student2.calculateTotalPowerSpecialSlytherin() +
+                    slytherin2.getFullName() + ", total power -  " + slytherin2.calculateTotalPowerSpecialSlytherin();
+        } else if (slytherin1.calculateTotalPowerSpecialSlytherin() < slytherin2.calculateTotalPowerSpecialSlytherin()) {
+            return slytherin2.getFullName() + ",  total power - " + slytherin2.calculateTotalPowerSpecialSlytherin() +
                     ", Stronger then a student, " +
-                    student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin();
+                    slytherin1.getFullName() + ", total power - " + slytherin1.calculateTotalPowerSpecialSlytherin();
         } else {
-            return student1.getFullName() + ", total power - " + student1.calculateTotalPowerSpecialSlytherin() +
+            return slytherin1.getFullName() + ", total power - " + slytherin1.calculateTotalPowerSpecialSlytherin() +
                     ", and, " +
-                    student2.getFullName() + ", total power - " + student2.calculateTotalPowerSpecialSlytherin() +
+                    slytherin2.getFullName() + ", total power - " + slytherin2.calculateTotalPowerSpecialSlytherin() +
                     " have egual power ";
         }
     }
